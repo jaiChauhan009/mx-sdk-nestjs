@@ -209,17 +209,17 @@ describe('Array Extensions', () => {
   describe('Group By', () => {
     const transaction1 = {
       sender: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqq9llllls5dvzk3',
-      receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40',
+      receiver: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40',
     };
 
     const transaction2 = {
       sender: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqq9llllls5dvzk3',
-      receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40',
+      receiver: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40',
     };
 
     const transaction3 = {
       sender: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqq9llllls5dvzk3',
-      receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9ldavllcf3mp40',
+      receiver: 'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9ldavllcf3mp40',
     };
 
     const array = [transaction1, transaction2, transaction3];
@@ -229,8 +229,8 @@ describe('Array Extensions', () => {
     });
 
     expect(array.groupBy((item) => item.receiver)).toEqual({
-      'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9ldavllcf3mp40': [transaction3],
-      'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40': [transaction1, transaction2],
+      'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9ldavllcf3mp40': [transaction3],
+      'drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqaqqqqqqqqq9lllllsf3mp40': [transaction1, transaction2],
     });
   });
 
