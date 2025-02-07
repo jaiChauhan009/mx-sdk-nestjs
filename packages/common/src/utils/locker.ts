@@ -1,5 +1,5 @@
 import { Logger } from "@nestjs/common";
-import { MetricsService, CpuProfiler, PerformanceProfiler } from "@multiversx/sdk-nestjs-monitoring";
+import { MetricsService, CpuProfiler, PerformanceProfiler } from "@dharitri/sdk-nestjs-monitoring";
 import { ContextTracker } from "./context.tracker";
 
 export class Locker {

@@ -1,4 +1,4 @@
-import { ApiUtils } from "@multiversx/sdk-nestjs-http";
+import { ApiUtils } from "@dharitri/sdk-nestjs-http";
 import { AbstractQuery } from "./abstract.query";
 import { ElasticPagination } from "./elastic.pagination";
 import { ElasticSortProperty } from "./elastic.sort.property";

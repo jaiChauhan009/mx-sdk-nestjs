@@ -1,9 +1,9 @@
 import moment from 'moment';
 import axios from 'axios';
 import { Injectable } from '@nestjs/common';
-import '@multiversx/sdk-nestjs-common/lib/utils/extensions/array.extensions';
+import '@dharitri/sdk-nestjs-common/lib/utils/extensions/array.extensions';
 import { RedisCacheService } from '../redis-cache';
-import { MetricsService, PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { MetricsService, PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
 import { DATE_FORMAT, GuestCacheMethodEnum, IGuestCacheEntity, IGuestCacheWarmerOptions, REDIS_PREFIX } from '../entities/guest.caching';
 
 @Injectable()

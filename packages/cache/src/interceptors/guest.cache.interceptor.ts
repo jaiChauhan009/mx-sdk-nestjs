@@ -1,6 +1,6 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nestjs/common";
 import { Observable, of } from "rxjs";
-import { DecoratorUtils } from "@multiversx/sdk-nestjs-common";
+import { DecoratorUtils } from "@dharitri/sdk-nestjs-common";
 import { IGuestCacheOptions } from "../entities/guest.caching";
 import { GuestCacheService } from "../guest-cache/guest-cache.service";
 import { NoCacheOptions } from "../decorators";

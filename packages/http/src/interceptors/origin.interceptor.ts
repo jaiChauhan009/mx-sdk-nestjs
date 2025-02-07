@@ -1,7 +1,7 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nestjs/common";
 import { Observable, throwError } from "rxjs";
 import { catchError, tap } from 'rxjs/operators';
-import { ContextTracker } from "@multiversx/sdk-nestjs-common";
+import { ContextTracker } from "@dharitri/sdk-nestjs-common";
 import { randomUUID } from 'crypto';
 
 @Injectable()

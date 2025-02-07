@@ -1,4 +1,4 @@
-import { DecoratorUtils } from "@multiversx/sdk-nestjs-common";
+import { DecoratorUtils } from "@dharitri/sdk-nestjs-common";
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nestjs/common";
 import { Observable } from "rxjs";
 import { map } from 'rxjs/operators';

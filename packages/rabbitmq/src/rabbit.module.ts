@@ -3,7 +3,7 @@ import { DynamicModule, Module, Provider } from '@nestjs/common';
 import { RabbitModuleAsyncOptions, OptionsInterface, RABBIT_ADDITIONAL_OPTIONS, RabbitModuleOptions } from './entities';
 import { RabbitPublisherService } from './publisher.service';
 import { RabbitContextCheckerService } from './rabbit-context-checker.service';
-import { SwappableSettingsModule, SwappableSettingsService, SwappableSettingsStorageInterface, SwappableSettingsAsyncOptions } from '@multiversx/sdk-nestjs-common';
+import { SwappableSettingsModule, SwappableSettingsService, SwappableSettingsStorageInterface, SwappableSettingsAsyncOptions } from '@dharitri/sdk-nestjs-common';
 
 @Module({
   providers: [RabbitContextCheckerService],

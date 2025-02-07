@@ -4,7 +4,7 @@ import {
   Interaction,
   IAddress,
   Transaction,
-} from "@multiversx/sdk-core";
+} from "@dharitri/sdk-core";
 import { OriginLogger } from "../utils/origin.logger";
 import { INetworkProvider } from "./interfaces";
 

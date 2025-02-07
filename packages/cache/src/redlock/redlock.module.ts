@@ -1,6 +1,6 @@
 import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { MetricsModule } from '@multiversx/sdk-nestjs-monitoring';
-import { RedisModule } from '@multiversx/sdk-nestjs-redis';
+import { MetricsModule } from '@dharitri/sdk-nestjs-monitoring';
+import { RedisModule } from '@dharitri/sdk-nestjs-redis';
 import { RedlockService } from './redlock.service';
 import { RedlockConnectionAsyncOptions, RedlockConnectionOptions } from './entities';
 import Redis from 'ioredis';

@@ -1,7 +1,7 @@
 {
-  "name": "@multiversx/sdk-nestjs-rabbitmq",
+  "name": "@dharitri/sdk-nestjs-rabbitmq",
   "version": "4.2.0",
-  "description": "Multiversx SDK Nestjs rabbitmq client package",
+  "description": "DharitrI SDK Nestjs rabbitmq client package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/multiversx/mx-sdk-nestjs.git"
+    "url": "git+https://github.com/dharitri/drt-sdk-nestjs.git"
   },
   "keywords": [
-    "multiversx",
+    "dharitri",
     "nestjs",
     "rabbitmq"
   ],
-  "author": "MultiversX",
+  "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@types/amqplib": "^0.8.2",
@@ -37,7 +37,7 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "@multiversx/sdk-nestjs-common": "^4.0.0",
+    "@dharitri/sdk-nestjs-common": "^4.0.0",
     "@nestjs/common": "^10.x"
   },
   "publishConfig": {

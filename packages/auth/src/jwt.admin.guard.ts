@@ -1,5 +1,5 @@
 import { Injectable, CanActivate, ExecutionContext, Inject } from '@nestjs/common';
-import { ExecutionContextUtils, MxnestConfigService, MXNEST_CONFIG_SERVICE } from '@multiversx/sdk-nestjs-common';
+import { ExecutionContextUtils, MxnestConfigService, MXNEST_CONFIG_SERVICE } from '@dharitri/sdk-nestjs-common';
 
 @Injectable()
 export class JwtAdminGuard implements CanActivate {

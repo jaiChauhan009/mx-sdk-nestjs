@@ -1,8 +1,8 @@
 import crypto from 'crypto';
 import { AmqpConnection } from '@golevelup/nestjs-rabbitmq';
 import { Inject, Injectable, Optional } from '@nestjs/common';
-import { Constants, OriginLogger, SwappableSettingsService } from '@multiversx/sdk-nestjs-common';
-import { MetricsService, PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { Constants, OriginLogger, SwappableSettingsService } from '@dharitri/sdk-nestjs-common';
+import { MetricsService, PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
 import { RABBIT_ADDITIONAL_OPTIONS } from './entities/constants';
 import { OptionsInterface } from './entities/options.interface';
 

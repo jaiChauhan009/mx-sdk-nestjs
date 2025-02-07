@@ -1,5 +1,5 @@
 import { DynamicModule, Global, Module, Provider } from "@nestjs/common";
-import { MetricsModule } from "@multiversx/sdk-nestjs-monitoring";
+import { MetricsModule } from "@dharitri/sdk-nestjs-monitoring";
 import { ApiService } from "./api.service";
 import { ApiModuleAsyncOptions } from "./entities/api.module.async.options";
 import { ApiModuleOptions } from "./entities/api.module.options";

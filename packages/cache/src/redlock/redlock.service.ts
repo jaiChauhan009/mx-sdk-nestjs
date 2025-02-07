@@ -1,7 +1,7 @@
 import Redis from 'ioredis';
 import { Inject, Injectable } from '@nestjs/common';
-import { MetricsService, PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
-import { OriginLogger } from '@multiversx/sdk-nestjs-common';
+import { MetricsService, PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
+import { OriginLogger } from '@dharitri/sdk-nestjs-common';
 import { RedlockConfiguration } from './redlock.configuration';
 import { LockTimeoutError } from './errors/lock.timeout.error';
 import { RedlockLogLevel } from './entities/redlock.log.level';

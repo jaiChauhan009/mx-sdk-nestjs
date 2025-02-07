@@ -1,7 +1,7 @@
 {
-  "name": "@multiversx/sdk-nestjs-elastic",
+  "name": "@dharitri/sdk-nestjs-elastic",
   "version": "4.2.0",
-  "description": "Multiversx SDK Nestjs elastic package",
+  "description": "DharitrI SDK Nestjs elastic package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/multiversx/mx-sdk-nestjs.git"
+    "url": "git+https://github.com/dharitri/drt-sdk-nestjs.git"
   },
   "keywords": [
-    "multiversx",
+    "dharitri",
     "nestjs",
     "elastic"
   ],
-  "author": "MultiversX",
+  "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.0",
@@ -31,7 +31,7 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "@multiversx/sdk-nestjs-http": "^4.0.0",
+    "@dharitri/sdk-nestjs-http": "^4.0.0",
     "@nestjs/common": "^10.x"
   },
   "publishConfig": {

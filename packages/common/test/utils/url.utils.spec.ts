@@ -7,8 +7,8 @@ describe('isLocalhost', () => {
   });
 
   it('should return false', () => {
-    expect(UrlUtils.isLocalhost('multiversx.com')).toBeFalsy();
-    expect(UrlUtils.isLocalhost('http://multiversx.com')).toBeFalsy();
-    expect(UrlUtils.isLocalhost('https://multiversx.com')).toBeFalsy();
+    expect(UrlUtils.isLocalhost('dharitri.com')).toBeFalsy();
+    expect(UrlUtils.isLocalhost('http://dharitri.com')).toBeFalsy();
+    expect(UrlUtils.isLocalhost('https://dharitri.com')).toBeFalsy();
   });
 });

@@ -1,8 +1,8 @@
-<a href="https://www.npmjs.com/package/@multiversx/sdk-nestjs-monitoring" target="_blank"><img src="https://img.shields.io/npm/v/@multiversx/sdk-nestjs-monitoring.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/@dharitri/sdk-nestjs-monitoring" target="_blank"><img src="https://img.shields.io/npm/v/@dharitri/sdk-nestjs-monitoring.svg" alt="NPM Version" /></a>
 
-# MultiversX NestJS Microservice Monitoring Utilities
+# DharitrI NestJS Microservice Monitoring Utilities
 
-This package contains a set of utilities commonly used for monitoring purposes in the MultiversX Microservice ecosystem. 
+This package contains a set of utilities commonly used for monitoring purposes in the DharitrI Microservice ecosystem. 
 The package relies on Prometheus to aggregate the metrics and it is using [prom-client](https://www.npmjs.com/package/prom-client) as a client for it.
 
 ## Installation
@@ -10,7 +10,7 @@ The package relies on Prometheus to aggregate the metrics and it is using [prom-
 `sdk-nestjs-monitoring` is delivered via **npm** and it can be installed as follows:
 
 ```
-npm install @multiversx/sdk-nestjs-monitoring
+npm install @dharitri/sdk-nestjs-monitoring
 ```
 
 ## Utility
@@ -20,7 +20,7 @@ The package exports **performance profilers**, **interceptors** and **metrics**.
 `PerformanceProfiler` is a class exported by the package that allows you to measure the execution time of your code.
 
 ```typescript
-import { PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
 
 const profiler = new PerformanceProfiler();
 await doSomething();
@@ -35,7 +35,7 @@ The `.stop()` method can receive two optional parameters:
 
 
 ```typescript
-import { PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
 
 const profiler = new PerformanceProfiler();
 await doSomething();
@@ -49,7 +49,7 @@ The output of the code above will be "`doSomething() execution time: 1.532ms`"
 `CpuProfiler` is a class exported by the package that allows you to measure the CPU execution time of your code. Given that JavaScript is a single-threaded language, it's important to be mindful of the amount of CPU time allocated to certain operations, as excessive consumption can lead to slowdowns or even blockages in your process.
 
 ```typescript
-import { CpuProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { CpuProfiler } from '@dharitri/sdk-nestjs-monitoring';
 
 const profiler = new CpuProfiler();
 await doHttpRequest()
@@ -62,7 +62,7 @@ The `.stop()` method can receive two optional parameters:
 - `description` - text used for default logging. Setting the description automatically triggers the printing of the `PerformanceProfiler` value. Default: `undefined`
 
 ```typescript
-import { CpuProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { CpuProfiler } from '@dharitri/sdk-nestjs-monitoring';
 
 const httpReqCpuProfiler = new CpuProfiler();
 await doHttpRequest();
@@ -91,7 +91,7 @@ The package provides a series of [Nestjs Interceptors](https://docs.nestjs.com/i
 *Both interceptors expect an instance of `metricsService` class as an argument.*
 
 ```typescript
-import { MetricsService, RequestCpuTimeInterceptor, LoggingInterceptor } from '@multiversx/sdk-nestjs-monitoring';
+import { MetricsService, RequestCpuTimeInterceptor, LoggingInterceptor } from '@dharitri/sdk-nestjs-monitoring';
 
 async function bootstrap() {
   // AppModule imports MetricsModule
@@ -108,7 +108,7 @@ async function bootstrap() {
 
 ## MetricsModule and MetricsService
 
-`MetricsModule` is a [Nestjs Module](https://docs.nestjs.com/modules) responsible for aggregating metrics data through `MetricsService` and exposing them to be consumed by Prometheus. `MetricsService` is extensible, you can define and aggregate your own metrics and expose them. By default it exposes a set of metrics created by the interceptors specified [here](#interceptors). Most of the Multiversx packages expose metrics by default through this service. For example [@multiversx/sdk-nestjs-redis](https://www.npmjs.com/package/@multiversx/sdk-nestjs-redis) automatically tracks the execution time of each redis query, overall redis health and much more, by leveraging the `MetricsService`.
+`MetricsModule` is a [Nestjs Module](https://docs.nestjs.com/modules) responsible for aggregating metrics data through `MetricsService` and exposing them to be consumed by Prometheus. `MetricsService` is extensible, you can define and aggregate your own metrics and expose them. By default it exposes a set of metrics created by the interceptors specified [here](#interceptors). Most of the DharitrI packages expose metrics by default through this service. For example [@dharitri/sdk-nestjs-redis](https://www.npmjs.com/package/@dharitri/sdk-nestjs-redis) automatically tracks the execution time of each redis query, overall redis health and much more, by leveraging the `MetricsService`.
 
 ### How to instantiate the MetricsModule and expose metrics endpoints for Prometheus
 
@@ -116,7 +116,7 @@ In our example we will showcase how to expose response time and CPU time of HTTP
 
 ```typescript
 import { Controller, Get } from '@nestjs/common';
-import { MetricsService } from '@multiversx/sdk-nestjs-monitoring';
+import { MetricsService } from '@dharitri/sdk-nestjs-monitoring';
 
 @Controller('metrics')
 export class MetricsController {
@@ -139,7 +139,7 @@ We can create a new class called `ApiMetricsService` which will have a new custo
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { MetricsService } from '@multiversx/sdk-nestjs-monitoring';
+import { MetricsService } from '@dharitri/sdk-nestjs-monitoring';
 import { register, Histogram } from 'prom-client';
 
 @Injectable()

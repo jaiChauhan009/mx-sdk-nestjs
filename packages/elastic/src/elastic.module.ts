@@ -1,7 +1,7 @@
 import { DynamicModule, Global, Provider } from "@nestjs/common";
-import { MetricsModule } from "@multiversx/sdk-nestjs-monitoring";
+import { MetricsModule } from "@dharitri/sdk-nestjs-monitoring";
 import { Module } from "@nestjs/common";
-import { ApiModule } from "@multiversx/sdk-nestjs-http";
+import { ApiModule } from "@dharitri/sdk-nestjs-http";
 import { ElasticService } from "./elastic.service";
 import { ElasticModuleOptions } from "./entities/elastic.module.options";
 import { ElasticModuleAsyncOptions } from "./entities/elastic.module.async.options";

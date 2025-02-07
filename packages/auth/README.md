@@ -1,25 +1,25 @@
-<a href="https://www.npmjs.com/package/@multiversx/sdk-nestjs-auth" target="_blank"><img src="https://img.shields.io/npm/v/@multiversx/sdk-nestjs-auth.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/@dharitri/sdk-nestjs-auth" target="_blank"><img src="https://img.shields.io/npm/v/@dharitri/sdk-nestjs-auth.svg" alt="NPM Version" /></a>
 
-# MultiversX NestJS Microservice Native Authentication Utilities
+# DharitrI NestJS Microservice Native Authentication Utilities
 
-This package contains a set of utilities commonly used for authentication purposes in the MultiversX Microservice ecosystem.  
-The package relies on [@multiversx/sdk-native-auth-server](https://www.npmjs.com/package/@multiversx/sdk-native-auth-server) for validating access tokens signed by MultiversX wallets.
+This package contains a set of utilities commonly used for authentication purposes in the DharitrI Microservice ecosystem.  
+The package relies on [@dharitri/sdk-native-auth-server](https://www.npmjs.com/package/@dharitri/sdk-native-auth-server) for validating access tokens signed by DharitrI wallets.
 
 ## Installation
 
 `sdk-nestjs-auth` is delivered via **npm** and it can be installed as follows:
 
 ```
-npm install @multiversx/sdk-nestjs-auth
+npm install @dharitri/sdk-nestjs-auth
 ```
 
 ## Obtaining a Native Auth token
 
-This package validates a payload signed by a MultiversX wallet. You can use the MultiversX Utils website to get a token you can use for testing.
+This package validates a payload signed by a DharitrI wallet. You can use the DharitrI Utils website to get a token you can use for testing.
 
-![image](https://github.com/multiversx/mx-sdk-nestjs/assets/6889483/374a4e3a-f7d3-4bd9-a212-a8615c89ab53)
+![image](https://github.com/dharitri/drt-sdk-nestjs/assets/6889483/374a4e3a-f7d3-4bd9-a212-a8615c89ab53)
 
-1. Navigate to [https://utils.multiversx.com/auth](https://utils.multiversx.com/auth) and choose the desired network from the select located in the upper right corner of the page
+1. Navigate to [https://utils.dharitri.com/auth](https://utils.dharitri.com/auth) and choose the desired network from the select located in the upper right corner of the page
 2. Click the **Generate** button
 3. Select a wallet you prefer to use from the modal dialog, and give it access to the page
 4. **Done!** You can now copy the token and use it as a Bearer token in your requests.
@@ -27,7 +27,7 @@ This package validates a payload signed by a MultiversX wallet. You can use the 
 To use it in your requests, you need to have an `Authorization` header with the value :  
 `Bearer <your_token_goes_here>`.  
 
-You also need to add an `origin` header with the value `https://utils.multiversx.com`. 
+You also need to add an `origin` header with the value `https://utils.dharitri.com`. 
 
 *Note: these steps are only needed while testing. In production, a frontend application will handle token generation*
 
@@ -40,13 +40,13 @@ It also provides some [NestJS Decorators](https://docs.nestjs.com/custom-decorat
 
 The authentication guards need 2 parameters on instantiation.  
 The fist parameter needs to be an instance of a class implementing the `MxnestConfigService` interface.  
-The second one, needs to be an instance of a [Caching service](https://www.npmjs.com/package/@multiversx/sdk-nestjs-cache)
+The second one, needs to be an instance of a [Caching service](https://www.npmjs.com/package/@dharitri/sdk-nestjs-cache)
 
 
 ```typescript
 import { Injectable } from "@nestjs/common";
 import { ApiConfigService } from "./api.config.service";
-import { MxnestConfigService } from "@multiversx/sdk-nestjs-common";
+import { MxnestConfigService } from "@dharitri/sdk-nestjs-common";
 
 @Injectable()
 export class SdkNestjsConfigServiceImpl implements MxnestConfigService {
@@ -80,7 +80,7 @@ You can register it as a provider, and the DI mechanism of NestJS will handle in
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { MXNEST_CONFIG_SERVICE } from "@multiversx/sdk-nestjs-common";
+import { MXNEST_CONFIG_SERVICE } from "@dharitri/sdk-nestjs-common";
 
 @Module({
   providers: [
@@ -103,7 +103,7 @@ NestJS guards can be controller-scoped, method-scoped, or global-scoped. Setting
 `NativeAuthGuard` performs validation of the block hash, verifies its validity, as well as origin verification on the access token.
 
 ```typescript
-import { NativeAuthGuard } from "@multiversx/sdk-nestjs-auth";
+import { NativeAuthGuard } from "@dharitri/sdk-nestjs-auth";
 
 @Controller('projects')
 @UseGuards(NativeAuthGuard)
@@ -115,7 +115,7 @@ In the example above the `NativeAuthGuard` is controller-scoped. This means that
 
 
 ```typescript
-import { NativeAuthGuard } from "@multiversx/sdk-nestjs-auth";
+import { NativeAuthGuard } from "@dharitri/sdk-nestjs-auth";
 
 @Controller('projects')
 export class ProjectsController {
@@ -141,7 +141,7 @@ In this case, the guard is method-scoped. Only `createProject` benefits from the
 *This guard cannot be used by itself. It always has to be paired with a `NativeAuthGuard`*
 
 ```typescript
-import { NativeAuthGuard, NativeAuthAdminGuard } from "@multiversx/sdk-nestjs-auth";
+import { NativeAuthGuard, NativeAuthAdminGuard } from "@dharitri/sdk-nestjs-auth";
 
 @Controller('admin')
 @UseGuards(NativeAuthGuard, NativeAuthAdminGuard)
@@ -155,7 +155,7 @@ export class AdminController {
 `JwtAuthenticateGuard` performs validation of a traditional [JSON web token](https://datatracker.ietf.org/doc/html/rfc7519). The usage is exactly the same as for the native auth guards.
 
 ```typescript
-import { JwtAuthenticateGuard } from "@multiversx/sdk-nestjs-auth";
+import { JwtAuthenticateGuard } from "@dharitri/sdk-nestjs-auth";
 
 @Controller('users')
 @UseGuards(JwtAuthenticateGuard)
@@ -171,7 +171,7 @@ export class UsersController {
 *There is one caveat: when creating the JWT, the client must include an `address` field in the payload, before signing it.*
 
 ```typescript
-import { JwtAuthenticateGuard, JwtAdminGuard } from "@multiversx/sdk-nestjs-auth";
+import { JwtAuthenticateGuard, JwtAdminGuard } from "@dharitri/sdk-nestjs-auth";
 
 @Controller('admin')
 @UseGuards(JwtAuthenticateGuard, JwtAdminGuard)
@@ -209,7 +209,7 @@ The `NativeAuth` decorator accepts a single parameter. In can be one of the foll
 Below is an example showing how to use the decorator to extract the signers address :
 
 ```typescript
-import { NativeAuthGuard, NativeAuth } from "@multiversx/sdk-nestjs-auth";
+import { NativeAuthGuard, NativeAuth } from "@dharitri/sdk-nestjs-auth";
 import { Controller, Get, UseGuards } from "@nestjs/common";
 
 @Controller()
@@ -232,7 +232,7 @@ The `Jwt` decorator works just like `NativeAuth`. The fields accessible inside i
 The `NoAuth` decorator can be used to skip authorization on a specific method. This is useful when a guard is scoped globally or at the controller level.
 
 ```typescript
-import { NoAuth } from "@multiversx/sdk-nestjs-auth";
+import { NoAuth } from "@dharitri/sdk-nestjs-auth";
 import { Controller, Get, UseGuards } from "@nestjs/common";
 
 @Controller()

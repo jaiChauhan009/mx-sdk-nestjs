@@ -1,11 +1,11 @@
 import { Injectable, CanActivate, ExecutionContext, Optional, Inject, Logger } from '@nestjs/common';
-import { CacheService } from '@multiversx/sdk-nestjs-cache';
-import { NativeAuthError, NativeAuthServer } from '@multiversx/sdk-native-auth-server';
-import { DecoratorUtils, MxnestConfigService, MXNEST_CONFIG_SERVICE, UrlUtils, ExecutionContextUtils } from '@multiversx/sdk-nestjs-common';
-import { PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
+import { CacheService } from '@dharitri/sdk-nestjs-cache';
+import { NativeAuthError, NativeAuthServer } from '@dharitri/sdk-native-auth-server';
+import { DecoratorUtils, MxnestConfigService, MXNEST_CONFIG_SERVICE, UrlUtils, ExecutionContextUtils } from '@dharitri/sdk-nestjs-common';
+import { PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
 import { NativeAuthInvalidOriginError } from './errors/native.auth.invalid.origin.error';
 import { NoAuthOptions } from './decorators';
-import { NativeAuthServerConfig } from "@multiversx/sdk-native-auth-server/lib/src/entities/native.auth.server.config";
+import { NativeAuthServerConfig } from "@dharitri/sdk-native-auth-server/lib/src/entities/native.auth.server.config";
 
 /**
  * This Guard protects all routes that do not have the `@NoAuth` decorator and sets the `X-Native-Auth-*` HTTP headers.
@@ -131,7 +131,7 @@ export class NativeAuthGuard implements CanActivate {
         }
         return false;
       }
-        throw error;
+      throw error;
     }
   }
 }

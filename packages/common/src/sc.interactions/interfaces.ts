@@ -1,5 +1,5 @@
-import { IContractQuery } from "@multiversx/sdk-core/out/networkProviders/interface";
-import { AccountOnNetwork, IAddress, ContractQueryResponse, NetworkConfig } from "@multiversx/sdk-core";
+import { IContractQuery } from "@dharitri/sdk-core/out/networkProviders/interface";
+import { AccountOnNetwork, IAddress, ContractQueryResponse, NetworkConfig } from "@dharitri/sdk-core";
 
 export interface INetworkProvider {
     /**

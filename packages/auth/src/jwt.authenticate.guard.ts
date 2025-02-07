@@ -1,7 +1,7 @@
 import { Injectable, CanActivate, ExecutionContext, Inject } from '@nestjs/common';
 import { verify } from 'jsonwebtoken';
-import { PerformanceProfiler } from '@multiversx/sdk-nestjs-monitoring';
-import { MxnestConfigService, MXNEST_CONFIG_SERVICE, DecoratorUtils, ExecutionContextUtils } from '@multiversx/sdk-nestjs-common';
+import { PerformanceProfiler } from '@dharitri/sdk-nestjs-monitoring';
+import { MxnestConfigService, MXNEST_CONFIG_SERVICE, DecoratorUtils, ExecutionContextUtils } from '@dharitri/sdk-nestjs-common';
 import { NoAuthOptions } from './decorators/no.auth';
 
 @Injectable()

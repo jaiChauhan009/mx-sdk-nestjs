@@ -1,4 +1,4 @@
-import { Address } from "@multiversx/sdk-core";
+import { Address } from "@dharitri/sdk-core";
 import { Logger } from "@nestjs/common";
 import { BinaryUtils } from "./binary.utils";
 

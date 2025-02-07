@@ -2,8 +2,8 @@ import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nes
 import { HttpAdapterHost } from "@nestjs/core";
 import { Observable, of, throwError } from "rxjs";
 import { catchError, tap } from 'rxjs/operators';
-import { DecoratorUtils, Constants } from "@multiversx/sdk-nestjs-common";
-import { MetricsService } from "@multiversx/sdk-nestjs-monitoring";
+import { DecoratorUtils, Constants } from "@dharitri/sdk-nestjs-common";
+import { MetricsService } from "@dharitri/sdk-nestjs-monitoring";
 import { CacheService } from "../cache";
 import { NoCacheOptions } from "../decorators";
 

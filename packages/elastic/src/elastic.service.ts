@@ -1,6 +1,6 @@
 import { forwardRef, Inject, Injectable } from "@nestjs/common";
-import { ApiService } from "@multiversx/sdk-nestjs-http";
-import { MetricsService, ElasticMetricType, PerformanceProfiler } from "@multiversx/sdk-nestjs-monitoring";
+import { ApiService } from "@dharitri/sdk-nestjs-http";
+import { MetricsService, ElasticMetricType, PerformanceProfiler } from "@dharitri/sdk-nestjs-monitoring";
 import { ElasticQuery } from "./entities/elastic.query";
 import { ElasticModuleOptions } from "./entities/elastic.module.options";
 

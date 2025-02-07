@@ -1,4 +1,4 @@
-import { AbiRegistry, SmartContract, Address } from "@multiversx/sdk-core";
+import { AbiRegistry, SmartContract, Address } from "@dharitri/sdk-core";
 import * as fs from "fs";
 import { OriginLogger } from "../utils/origin.logger";
 

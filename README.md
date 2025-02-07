@@ -1,18 +1,18 @@
-<a href="https://www.npmjs.com/package/@multiversx/sdk-nestjs-common" target="_blank"><img src="https://img.shields.io/npm/v/@multiversx/sdk-nestjs-common.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/@dharitri/sdk-nestjs-common" target="_blank"><img src="https://img.shields.io/npm/v/@dharitri/sdk-nestjs-common.svg" alt="NPM Version" /></a>
 
-# MultiversX NestJS Microservice Utilities
+# DharitrI NestJS Microservice Utilities
 
-This package contains a set of utilities commonly used in the MultiversX Microservice ecosystem.
+This package contains a set of utilities commonly used in the DharitrI Microservice ecosystem.
 
 It relies on the following peer dependencies which must be installed in the parent package:
 
-- @multiversx/sdk-core
+- @dharitri/sdk-core
 - @nestjs/common v9
 - @nestjs/swagger v9
 
 ## Documentation
 
-- [Multiversx Docs](https://docs.multiversx.com/sdk-and-tools/sdk-nestjs)
+- [DharitrI Docs](https://docs.dharitri.com/sdk-and-tools/sdk-nestjs)
 
 ## CHANGELOG
 
@@ -22,14 +22,14 @@ It relies on the following peer dependencies which must be installed in the pare
 
 This monorepo contains the source code for the following packages:
 
-- @multiversx/sdk-nestjs-common [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-common)
-- @multiversx/sdk-nestjs-auth [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-auth)
-- @multiversx/sdk-nestjs-http [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-http)
-- @multiversx/sdk-nestjs-monitoring [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-monitoring)
-- @multiversx/sdk-nestjs-elastic [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-elastic)
-- @multiversx/sdk-nestjs-redis [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-redis)
-- @multiversx/sdk-nestjs-rabbitmq [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-rabbitmq)
-- @multiversx/sdk-nestjs-cache [npm](https://www.npmjs.com/package/@multiversx/sdk-nestjs-cache)
+- @dharitri/sdk-nestjs-common [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-common)
+- @dharitri/sdk-nestjs-auth [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-auth)
+- @dharitri/sdk-nestjs-http [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-http)
+- @dharitri/sdk-nestjs-monitoring [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-monitoring)
+- @dharitri/sdk-nestjs-elastic [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-elastic)
+- @dharitri/sdk-nestjs-redis [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-redis)
+- @dharitri/sdk-nestjs-rabbitmq [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-rabbitmq)
+- @dharitri/sdk-nestjs-cache [npm](https://www.npmjs.com/package/@dharitri/sdk-nestjs-cache)
 
 
 ## Installation
@@ -37,7 +37,7 @@ This monorepo contains the source code for the following packages:
 `sdk-nestjs-${package}` is delivered via **npm** and it can be installed as follows:
 
 ```
-npm install @multiversx/sdk-nestjs-${package}
+npm install @dharitri/sdk-nestjs-${package}
 ```
 
 ## Code examples
@@ -80,7 +80,7 @@ export class FeatureModule{}
 In your provider:
 
 ```
-import { CacheService } from "@multiversx/sdk-nestjs-cache";
+import { CacheService } from "@dharitri/sdk-nestjs-cache";
 
 @Injectable()
 export class FeatureService {
@@ -133,7 +133,7 @@ This package is for dApps that interacts with smart contracts
 
 #### Contract Loader
 
-Uses Singleton pattern and load a [SmartContract](https://github.com/multiversx/mx-sdk-erdjs/blob/main/src/smartcontracts/smartContract.ts) from an abi path.
+Uses Singleton pattern and load a [SmartContract](https://github.com/dharitri/drt-sdk-drtjs/blob/main/src/smartcontracts/smartContract.ts) from an abi path.
 You can also load multiple contracts with same abi.
 
 ```
@@ -144,7 +144,7 @@ const sc = await cLoader.getContract(CONTRACT_ADDRESS);
 
 #### Contract Query Runner
 
-Execute contract queries using a multiversx proxy provider (api/gateway).
+Execute contract queries using a dharitri proxy provider (api/gateway).
 
 ```
 const cRunner = new ContractQueryRunner(new ApiNetworkProvider(this.apiConfigService.getApiUrl()));
@@ -158,7 +158,7 @@ const queryResponse = await cRunner.runQuery(contract, interaction);
 
 #### Contract Transaction Generator
 
-Create transactions from smart contract interactions using and multiversx proxy provider (api/gateway).
+Create transactions from smart contract interactions using and dharitri proxy provider (api/gateway).
 
 ```
 const txGenerator = new ContractTransactionGenerator(provider);

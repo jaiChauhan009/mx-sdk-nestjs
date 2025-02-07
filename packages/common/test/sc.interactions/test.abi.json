@@ -12,13 +12,13 @@
             "version": "0.0.0"
         },
         "framework": {
-            "name": "elrond-wasm",
+            "name": "numbat-wasm",
             "version": "0.30.0"
         }
     },
     "docs": [
         "Source code for the pause module:",
-        "https://github.com/ElrondNetwork/elrond-wasm-rs/blob/master/elrond-wasm-modules/src/pause.rs"
+        "https://github.com/NumbatNetwork/numbat-wasm-rs/blob/master/numbat-wasm-modules/src/pause.rs"
     ],
     "name": "Metabonding",
     "constructor": {
@@ -54,7 +54,7 @@
                     "type": "BigUint"
                 },
                 {
-                    "name": "user_lkmex_staked_amount",
+                    "name": "user_lkmoa_staked_amount",
                     "type": "BigUint"
                 }
             ],

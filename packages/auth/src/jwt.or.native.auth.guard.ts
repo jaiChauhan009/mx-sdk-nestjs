@@ -1,6 +1,6 @@
 import { Injectable, CanActivate, ExecutionContext, Inject, Optional } from '@nestjs/common';
-import { CacheService } from '@multiversx/sdk-nestjs-cache';
-import { MxnestConfigService, MXNEST_CONFIG_SERVICE } from '@multiversx/sdk-nestjs-common';
+import { CacheService } from '@dharitri/sdk-nestjs-cache';
+import { MxnestConfigService, MXNEST_CONFIG_SERVICE } from '@dharitri/sdk-nestjs-common';
 import { JwtAuthenticateGuard } from './jwt.authenticate.guard';
 import { NativeAuthGuard } from './native.auth.guard';
 

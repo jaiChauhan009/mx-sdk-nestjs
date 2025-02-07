@@ -1,6 +1,6 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from "@nestjs/common";
 import { Observable } from "rxjs";
-import { ComplexityExceededException, ApplyComplexityOptions, DecoratorUtils, ComplexityUtils } from "@multiversx/sdk-nestjs-common";
+import { ComplexityExceededException, ApplyComplexityOptions, DecoratorUtils, ComplexityUtils } from "@dharitri/sdk-nestjs-common";
 
 @Injectable()
 export class ComplexityInterceptor implements NestInterceptor {

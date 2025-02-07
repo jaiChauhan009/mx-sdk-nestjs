@@ -1,7 +1,7 @@
 {
-  "name": "@multiversx/sdk-nestjs-common",
+  "name": "@dharitri/sdk-nestjs-common",
   "version": "4.2.0",
-  "description": "Multiversx SDK Nestjs common package",
+  "description": "DharitrI SDK Nestjs common package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/multiversx/mx-sdk-nestjs.git"
+    "url": "git+https://github.com/dharitri/drt-sdk-nestjs.git"
   },
   "keywords": [
-    "multiversx",
+    "dharitri",
     "nestjs",
     "common"
   ],
-  "author": "MultiversX",
+  "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@types/node": "^16.11.10",
@@ -33,13 +33,13 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@multiversx/sdk-core": "^13.5.0",
+    "@dharitri/sdk-core": "^13.5.0",
     "nest-winston": "^1.6.2",
     "uuid": "^8.3.2",
     "winston": "^3.7.2"
   },
   "peerDependencies": {
-    "@multiversx/sdk-nestjs-monitoring": "^4.0.0",
+    "@dharitri/sdk-nestjs-monitoring": "^4.0.0",
     "@nestjs/common": "^10.x",
     "@nestjs/config": "^3.x",
     "@nestjs/core": "^10.x",

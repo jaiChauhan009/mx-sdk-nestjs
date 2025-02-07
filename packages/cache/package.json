@@ -1,7 +1,7 @@
 {
-  "name": "@multiversx/sdk-nestjs-cache",
+  "name": "@dharitri/sdk-nestjs-cache",
   "version": "4.2.0",
-  "description": "Multiversx SDK Nestjs cache package",
+  "description": "DharitrI SDK Nestjs cache package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/multiversx/mx-sdk-nestjs.git"
+    "url": "git+https://github.com/dharitri/drt-sdk-nestjs.git"
   },
   "keywords": [
-    "multiversx",
+    "dharitri",
     "nestjs",
     "cache"
   ],
-  "author": "MultiversX",
+  "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@types/node": "^16.11.10",
@@ -40,9 +40,9 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "@multiversx/sdk-nestjs-common": "^4.0.0",
-    "@multiversx/sdk-nestjs-monitoring": "^4.0.0",
-    "@multiversx/sdk-nestjs-redis": "^4.0.0",
+    "@dharitri/sdk-nestjs-common": "^4.0.0",
+    "@dharitri/sdk-nestjs-monitoring": "^4.0.0",
+    "@dharitri/sdk-nestjs-redis": "^4.0.0",
     "@nestjs/common": "^10.x",
     "@nestjs/core": "^10.x"
   },

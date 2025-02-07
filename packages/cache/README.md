@@ -1,15 +1,15 @@
-<a href="https://www.npmjs.com/package/@multiversx/sdk-nestjs-monitoring" target="_blank"><img src="https://img.shields.io/npm/v/@multiversx/sdk-nestjs-cache.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/@dharitri/sdk-nestjs-monitoring" target="_blank"><img src="https://img.shields.io/npm/v/@dharitri/sdk-nestjs-cache.svg" alt="NPM Version" /></a>
 
-# MultiversX NestJS Microservice Cache Utilities
+# DharitrI NestJS Microservice Cache Utilities
 
-This package contains a set of utilities commonly used for caching purposes in the MultiversX Microservice ecosystem. 
+This package contains a set of utilities commonly used for caching purposes in the DharitrI Microservice ecosystem. 
 
 ## Installation
 
 `sdk-nestjs-cache` is delivered via **npm** and it can be installed as follows:
 
 ```
-npm install @multiversx/sdk-nestjs-cache
+npm install @dharitri/sdk-nestjs-cache
 ```
 
 ## Utility
@@ -17,8 +17,8 @@ The package exports **in memory cache service** and **remote cache service**.
 
 ## Table of contents
 - [In Memory Cache](#in-memory-cache) - super fast in memory caching system based on [LRU cache](https://www.npmjs.com/package/lru-cache)
-- [Redis Cache](#redis-cache) - Caching system based on [Redis](https://www.npmjs.com/package/@multiversx/sdk-nestjs-redis)
-- [Cache Service](#cache-service) - MultiversX caching system which combines in-memory and Redis cache, forming a two-layer caching system
+- [Redis Cache](#redis-cache) - Caching system based on [Redis](https://www.npmjs.com/package/@dharitri/sdk-nestjs-redis)
+- [Cache Service](#cache-service) - DharitrI caching system which combines in-memory and Redis cache, forming a two-layer caching system
 
 ## In memory cache
 In memory cache, available through `InMemoryCacheService`, is used to read and write data from and into the memory storage of your Node.js instance.
@@ -31,7 +31,7 @@ Let's take as an example a ConfigService that loads some non-crucial configurati
 Usage example: 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { InMemoryCacheService } from '@multiversx/sdk-nestjs-cache';
+import { InMemoryCacheService } from '@dharitri/sdk-nestjs-cache';
 
 @Injectable()
 export class ConfigService {
@@ -117,7 +117,7 @@ Usage example:
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { RedisCacheService } from '@multiversx/sdk-nestjs-cache';
+import { RedisCacheService } from '@dharitri/sdk-nestjs-cache';
 
 @Injectable()
 export class ConfigService {
@@ -192,7 +192,7 @@ Usage example:
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { CacheService } from '@multiversx/sdk-nestjs-cache';
+import { CacheService } from '@dharitri/sdk-nestjs-cache';
 
 @Injectable()
 export class ConfigService {

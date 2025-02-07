@@ -1,5 +1,5 @@
 
-import { ContractQueryResponse, ResultsParser, SmartContract, Interaction, TypedOutcomeBundle } from "@multiversx/sdk-core";
+import { ContractQueryResponse, ResultsParser, SmartContract, Interaction, TypedOutcomeBundle } from "@dharitri/sdk-core";
 import { OriginLogger } from "../utils/origin.logger";
 import { INetworkProvider } from "./interfaces";
 
